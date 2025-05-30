@@ -36,8 +36,8 @@ This project implements a multithreaded HTTP proxy server in Go, featuring an in
 Clone the repository (or create the project structure):
 
 ```sh
-git clone https://github.com/your-username/go-proxy-server.git # Replace with your actual repo
-cd go-proxy-server
+git clone https://github.com/your-username/multithreaded-proxy-web-server.git # Replace with your actual repo
+cd multithreaded-proxy-web-server
 ```
 
 (If you are building from scratch, simply create a directory and `go mod init` inside it.)
@@ -45,7 +45,7 @@ cd go-proxy-server
 Initialize Go module (if not already done):
 
 ```sh
-go mod init your_proxy_project # Use a meaningful name for your project
+go mod init multithreaded-proxy-web-server # Use a meaningful name for your project
 ```
 
 ### Running the Server
@@ -53,13 +53,13 @@ go mod init your_proxy_project # Use a meaningful name for your project
 Build the application:
 
 ```sh
-go build -o proxy-server .
+go build -o multithreaded-proxy-web-server .
 ```
 
 Run the server:
 
 ```sh
-./proxy-server
+./multithreaded-proxy-web-server
 ```
 
 By default, the server will listen on [http://localhost:8080](http://localhost:8080).
@@ -88,8 +88,7 @@ You will see the response from `example.com` served through your proxy. Subseque
 ```
 .
 ├── main.go               # Main application logic, server setup, and proxy handler
-├── cache/                # Directory for cache implementation
-│   └── lru.go            # LRU cache data structure and methods
+│── lru.go            # LRU cache data structure and methods
 ├── go.mod                # Go module definition
 ├── go.sum                # Go module checksums
 └── README.md             # This file
@@ -99,6 +98,3 @@ You will see the response from `example.com` served through your proxy. Subseque
 
 Contributions are welcome! Please feel free to open issues or submit pull requests.
 
-## License
-
-This project is open-source and available under the MIT License.
